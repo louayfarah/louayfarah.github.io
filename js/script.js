@@ -42,8 +42,7 @@ async function addCustomField(newName, newFieldType, api_token, company_domain)
     "name":newName,
     "field_type":newFieldType
   };
-
-
+  console.log(newField);
   const response = await fetch(url,
     {
       method:"POST",
@@ -190,15 +189,15 @@ async function createJob()
   var inputs = saveInfo();
 
   //Checking whether the input was complete
-  if(inputs == null)
+  if(inputs != null)
   {
     //authentication
     var api_token = "7af93c78f040633f42e7e8ef1c0c530ea2703d6b";
     var company_domain = "louay-sandbox";
 
     //Assign field/id pairs
-    let idOf = new Map();
-    let keyOf = new Map();
+    var idOf = new Map();
+    var keyOf = new Map();
 
     //Creating missing fields
     await createMissingFields(api_token, company_domain, idOf, keyOf);
