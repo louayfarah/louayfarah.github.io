@@ -1,0 +1,230 @@
+body {
+  width: 1fr;
+}
+
+.container {
+  font-family: sans-serif, Arial;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40vh 48vh 12vh;
+  grid-gap: 1em;
+}
+
+input[type=text] {
+  color: rgb(120, 120, 120);
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 0.125em solid rgb(200, 200, 200);
+  border-radius: 0.5em;
+  padding: 1em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+input[type=date] {
+  color: rgb(120, 120, 120);
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 0.125em solid rgb(200, 200, 200);
+  border-radius: 0.5em;
+  padding: 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  outline: none;
+}
+
+input[type=date]:focus {
+  border: 3px solid blue;
+}
+
+input[type=time] {
+  color: rgb(120, 120, 120);
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 0.125em solid rgb(200, 200, 200);
+  border-radius: 0.5em;
+  padding: 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  outline: none;
+}
+
+input[type=time]:focus {
+  border: 3px solid blue;
+}
+
+select {
+  color: rgb(120, 120, 120);
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 0.125em solid rgb(200, 200, 200);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  outline: none;
+}
+
+select:focus {
+  border: 3px solid #555;
+}
+
+input[type="button"] {
+  background-color: lightgrey;
+  color: rgb(50, 50, 50);
+  font-size: 1.5em;
+  font-weight: bold;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 1px 1px rgb(150, 150, 150);
+  border-radius: 2em;
+  border-style: none;
+  padding: 0.5em;
+}
+
+input[type="button"]:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+.inputSection {
+  box-shadow: 2px 4px 2px 2px rgb(150, 150, 150);
+  border-radius: 1em;
+  padding: 1em;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template: repeat(6,7.5vh) / repeat(2, 1fr);
+}
+
+.sectionTitle {
+  font-size: 150%;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+  grid-area: section;
+}
+
+#clientDetails {
+  grid-template-areas:
+    "section section"
+    "first last"
+    "phone phone"
+    "email email"
+    ". ."
+    ". ."
+  ;
+}
+
+#firstName {
+  grid-area: first;
+}
+
+#lastName {
+  grid-area: last;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#email {
+  grid-area: email;
+}
+
+
+#jobDetails {
+  grid-template-areas:
+    "section section"
+    "jobType jobType"
+    "jobSource jobSource"
+    "jobDesc jobDesc"
+    ". ."
+    ". ."
+  ;
+}
+
+#jobType {
+  grid-area: jobType;
+}
+
+#jobSource {
+  grid-area: jobSource;
+}
+
+#jobDescription {
+  grid-area: jobDesc;
+
+}
+
+
+#serviceLocation {
+  grid-template-areas:
+    "section section"
+    "addressLine addressLine"
+    "city city"
+    "state state"
+    "zip area"
+    ". ."
+  ;
+}
+
+#addressLine {
+  grid-area: addressLine;
+}
+
+#city {
+  grid-area: city;
+}
+
+#state {
+  grid-area: state;
+}
+
+#zip {
+  grid-area: zip;
+}
+
+#area {
+  grid-area: area;
+}
+
+
+#scheduled {
+  grid-template-areas:
+    "section section"
+    "startDate startDate"
+    "startTime endTime"
+    "technician technician"
+    ". ."
+    ". ."
+  ;
+}
+
+#startDate {
+  grid-area: startDate;
+}
+
+#startTime {
+  grid-area: startTime;
+  width: 100%;
+}
+
+#endTime {
+  grid-area: endTime;
+  width: 100%;
+}
+
+#technician {
+  grid-area: technician;
+}
+
+#createJob {
+  text-align: right;
+}
+
+#saveInfo {
+  text-align: left;
+}

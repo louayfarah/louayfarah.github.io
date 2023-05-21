@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>NEW Create a job</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This iframe is used to get info from a client and create a new deal and job in pipedrive.">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link href="images/favico.ico" type="image/x-icon" rel="shortcut icon" >
+  </head>
+  <body>
+    <div class="container">
+      <div id="clientDetails" class="inputSection">
+        <div class="sectionTitle">
+          Client details
+        </div>
+        <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+        <input type="text" id="phone" name="phone" placeholder="Phone" required>
+        <input type="text" id="email" name="email" placeholder="Email (optional)">
+      </div>
+      <div id="jobDetails" class="inputSection">
+        <div class="sectionTitle">
+          Job details
+        </div>
+        <select name="jobType" id="jobType" required>
+          <option value="isEmpty">Job type</option>
+          <option value="Dishwasher repair">Dishwasher repair</option>
+        </select>
+        <select name="jobSource" id="jobSource" required>
+          <option value="isEmpty">Job source</option>
+          <option value="GL Orlando">GL Orlando</option>
+        </select>
+        <input type="text" id="jobDescription" name="jobDescription" placeholder="Job description (optional)">
+      </div>
+      <div id="serviceLocation" class="inputSection">
+        <div class="sectionTitle">
+          Service location
+        </div>
+        <input type="text" id="addressLine" name="addressLine" placeholder="Address Line 1" required>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="state" name="state" placeholder="State" required>
+        <input type="text" id="zip" name="zip" placeholder="Zip code" required>
+        <select name="area" id="area" required>
+          <option value="isEmpty">Area</option>
+          <option value="Tampa">Tampa</option>
+          <option value="Miami">Miami</option>
+          <option value="Houston">Houston</option>
+          <option value="Charlotte">Charlotte</option>
+          <option value="Austin">Austin</option>
+          <option value="Orlando">Orlando</option>
+        </select>
+      </div>
+      <div id="scheduled" class="inputSection">
+        <div class="sectionTitle">
+          Scheduled
+        </div>
+        <input type="text" id="startDate" name="startDate" placeholder="Start date" onfocus="(this.type = 'date')" onblur="(this.value == '' ? this.type='text' : this.type='date')" required>
+        <input type="text" id="startTime" name="startTime" placeholder="Start time" onfocus="(this.type = 'time')" onblur="(this.value == '' ? this.type='text' : this.type='time')" required>
+        <input type="text" id="endTime" name="endTime" placeholder="End time" onfocus="(this.type = 'time')" onblur="(this.value == '' ? this.type='text' : this.type='time')" required>
+        <select name="technician" id="technician" required>
+          <option value="isEmpty">Select technician</option>
+          <option value="Artem Amirdzhanyan">Artem Amirdzhanyan</option>
+        </select>
+      </div>
+      <div id="createJob"><input type="button" value="Create job" onclick="createJob()"></div>
+      <div id="saveInfo"><input type="button" value="Save info" onclick="saveInfo()"></div>
+    </div>
+  </body>
+</html>
